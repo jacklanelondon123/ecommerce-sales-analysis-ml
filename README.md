@@ -12,7 +12,8 @@ It demonstrates a complete **data science workflow** — from data exploration a
 4. [Sales Forecasting](#4-sales-forecasting)  
 5. [Customer Segmentation (RFM Analysis)](#5-customer-segmentation-rfm-analysis)  
 6. [Key Insights & Business Impact](#6-key-insights--business-impact)  
-7. [Dataset Source](#7-dataset-source)
+7. [Dataset Source](#7-dataset-source)  
+8. [How to Run This Project](#8-how-to-run-this-project)
 
 ---
 
@@ -27,52 +28,52 @@ It demonstrates a complete **data science workflow** — from data exploration a
 The data was cleaned in Python to remove null values, duplicates, and invalid entries.
 
 ### 🔍 Data Summary (Before Cleaning)
-![Raw Data Summary](images/Screenshot%202025-10-14%20000401.png)
+![Raw Data Summary](./images/Screenshot%202025-10-14%20000401.png?raw=1&v=2)
 
 ### 🧾 Sample Records
-![Raw Data Sample](images/Screenshot%202025-10-14%20000620.png)
+![Raw Data Sample](./images/Screenshot%202025-10-14%20000620.png?raw=1&v=2)
 
 ### 🧮 Summary Statistics (Before Cleaning)
-![Data Summary Stats](images/Screenshot%202025-10-14%20000912.png)
+![Data Summary Stats](./images/Screenshot%202025-10-14%20000912.png?raw=1&v=2)
 
 ### 🧮 Summary Statistics (After Cleaning)
-![Cleaned Data Stats](images/Screenshot%202025-10-14%20000931.png)
+![Cleaned Data Stats](./images/Screenshot%202025-10-14%20000931.png?raw=1&v=2)
 
 ---
 
 ## 📊 3. Exploratory Analysis
 
 ### 🌍 Top 10 Countries by Sales
-![Top Countries](images/Screenshot%202025-10-14%20001225.png)
+![Top Countries](./images/Screenshot%202025-10-14%20001225.png?raw=1&v=2)
 
 ### 🏆 Top 10 Products by Sales
-![Top Products](images/Screenshot%202025-10-14%200012226.png)
+![Top Products](./images/Screenshot%202025-10-14%200012226.png?raw=1&v=2)
 
 ---
 
 ## 📈 4. Sales Forecasting
 
 ### 📅 Monthly Sales Over Time
-![Monthly Sales Over Time](images/Screenshot%202025-10-14%20001035.png)
+![Monthly Sales Over Time](./images/Screenshot%202025-10-14%20001035.png?raw=1&v=2)
 
 ### 📈 Monthly Sales with Trend Line
-![Trend Line](images/Screenshot%202025-10-14%20001059.png)
+![Trend Line](./images/Screenshot%202025-10-14%20001059.png?raw=1&v=2)
 
 ### 🔮 Monthly Sales Forecast (Next 6 Months)
-![Sales Forecast](images/Screenshot%202025-10-14%200012319.png)
+![Sales Forecast](./images/Screenshot%202025-10-14%200012319.png?raw=1&v=2)
 
 ---
 
 ## 👥 5. Customer Segmentation (RFM Analysis)
 
 ### 🧾 RFM Table (Sample)
-![RFM Table](images/Screenshot%202025-10-14%20013756.png)
+![RFM Table](./images/Screenshot%202025-10-14%20013756.png?raw=1&v=2)
 
 ### 📊 RFM Segment Summary
-![RFM Segment Summary](images/Screenshot%202025-10-14%20013902.png)
+![RFM Segment Summary](./images/Screenshot%202025-10-14%20013902.png?raw=1&v=2)
 
 ### 📉 Customers by RFM Segment
-![Customers by RFM Segment](images/Screenshot%202025-10-14%20013923.png)
+![Customers by RFM Segment](./images/Screenshot%202025-10-14%20013923.png?raw=1&v=2)
 
 ---
 
@@ -94,14 +95,21 @@ The dataset used in this project is **Online Retail II**, available from the
 
 ---
 
-## 🧩 Project Highlights
-- Cleaned and processed 500K+ transaction records  
-- Identified high-value markets and products  
-- Applied time-series forecasting for future sales  
-- Segmented customers using **RFM model**  
-- Delivered actionable insights for marketing optimization  
+## ⚙️ 8. How to Run This Project
 
----
+### 🧩 Prerequisites
+- Python 3.10+  
+- Jupyter Notebook  
+- Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `sklearn`, `statsmodels`
 
-⭐ **If you found this project helpful, please star the repository!**  
-📈 Created with Python, Pandas, Matplotlib & Scikit-learn.
+### ▶️ Steps
+```bash
+# 1. Clone the repo
+git clone https://github.com/<your-username>/ecommerce-sales-analysis-ml.git
+cd ecommerce-sales-analysis-ml
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the notebook
+jupyter notebook Ecommerce_Sales_Analysis.ipynb
