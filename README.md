@@ -141,7 +141,6 @@ Used **Recency, Frequency, and Monetary** scores to group customers into meaning
 - **Python (Pandas, Numpy, Matplotlib, Seaborn, Sklearn, Statsmodels)**  
 - **Jupyter Notebook**  
 - **GitHub** for version control and project presentation  
-- **Tableau (next stage)** for dashboard insights
 
 ---
 
