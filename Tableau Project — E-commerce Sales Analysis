@@ -1,0 +1,117 @@
+# 📊 Tableau Project — E-commerce Sales Analysis
+
+This README explains my **Tableau visual analysis**, which continues from the Python data cleaning and RFM segmentation work in my main project.  
+It shows how the insights from Python were turned into clear, interactive visuals.
+
+---
+
+## 🧹 Dataset Used
+Two files were used in Tableau:
+
+- **`online_retail_cleaned.csv`** → cleaned sales data for trend, countries, and products charts  
+- **`online_retail_rfm.csv`** → RFM segmentation data for customer segment analysis  
+
+Both were exported from the Jupyter notebook (`Ecommerce_Sales_Analysis.ipynb`).
+
+---
+
+## 📈 Dashboards & Insights
+
+### 🗓 1. Monthly Sales Trend (£)
+![Monthly Sales Trend](images/monthly_sales_trend.png)
+
+**Build Summary**
+- `Invoice Date` → Columns (by Month)  
+- `SUM(Sales)` → Rows  
+- Add labels (formatted as £, no decimals)
+
+**Insights**
+- Sales increase sharply from **September to December**, peaking in **November (£1.17M)**.  
+- Strong **Q4 seasonality** suggests higher demand during holidays and year-end promotions.
+
+---
+
+### 🌍 2. Top 10 Countries by Sales (£)
+![Top 10 Countries](images/top_countries.png)
+
+**Build Summary**
+- `Country` → Rows  
+- `SUM(Sales)` → Columns  
+- Filter to **Top 10** by `SUM(Sales)`  
+- Format axis to **Currency (£)**
+
+**Insights**
+- The **United Kingdom dominates**, contributing over **£7.4M** in sales.  
+- Secondary markets include **EIRE**, **Netherlands**, **Germany**, and **France**.  
+- These could be strategic regions for marketing expansion.
+
+---
+
+### 🛍 3. Top 10 Products by Sales (£)
+![Top 10 Products](images/top_products.png)
+
+**Build Summary**
+- `Description` → Rows  
+- `SUM(Sales)` → Columns  
+- Filter: **Top 10** by sales  
+- Add data labels (formatted £, no decimals)
+
+**Insights**
+- **“White Hanging Heart T-Light Holder”** and **“Regency Cake Stand 3 Tier”** are best sellers.  
+- Product sales are highly concentrated — top products drive most of the revenue.  
+- Opportunity to promote mid-tier products or create bundles around top sellers.
+
+---
+
+### 🧩 4. RFM Customer Segments
+![RFM Segments](images/rfm_segments.png)
+
+**Build Summary**
+- Data source: `online_retail_rfm.csv`  
+- Blend with `online_retail_cleaned.csv` on `Customer ID` if needed.  
+- `Segment` → Rows  
+- `COUNTD(Customer ID)` → Columns
+
+**Insights**
+- Majority are **Champions** and **Potential Loyalists** — engaged, repeat customers.  
+- Smaller **At Risk** and **Lost** segments indicate some churn potential.  
+- Suggests opportunity for **re-engagement campaigns** and loyalty offers.
+
+---
+
+## 🧠 Summary of Findings
+
+| Area | Key Takeaways |
+|------|----------------|
+| **Seasonality** | Strong holiday peak — November highest month. |
+| **Geography** | UK overwhelmingly leads, EIRE and Netherlands next. |
+| **Products** | Revenue concentrated in a few SKUs — room for diversification. |
+| **Customers** | Healthy loyalty base; retention focus needed for “At Risk” group. |
+
+---
+
+## 🖼 Dashboard Layout Plan
+
+| Section | Visualization |
+|----------|----------------|
+| **Top Row** | Monthly Sales Trend (full width) |
+| **Middle Row** | Top 10 Countries (left) + Top 10 Products (right) |
+| **Bottom Row** | RFM Customer Segments (full width) |
+| **Footer** | Data source and project link |
+
+---
+
+## ⚙️ How to Recreate in Tableau
+
+1. Open Tableau → **Connect → Text file → `online_retail_cleaned.csv`**  
+2. Add second data source → `online_retail_rfm.csv`  
+3. (Optional) Blend on `Customer ID`  
+4. Follow build steps above for each visualization  
+5. Combine sheets into one dashboard using the layout plan  
+
+---
+
+
+**Created by:** *Jack Lane*  
+**Tools Used:** Python, Tableau Desktop  
+**Dataset:** Online Retail II (UCI Machine Learning Repository)
