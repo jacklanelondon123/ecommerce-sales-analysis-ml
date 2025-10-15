@@ -1,17 +1,19 @@
 # 📊 Tableau Project — E-commerce Sales Analysis
 
 This README explains my **Tableau visual analysis**, which continues from the Python data cleaning and RFM segmentation work in my main project.  
-It shows how the insights from Python were turned into clear, interactive visuals.
+It shows how the insights from Python were transformed into clear, interactive Tableau dashboards.
 
 ---
 
 ## 🧹 Dataset Used
+
 Two files were used in Tableau:
 
-- **`online_retail_cleaned.csv`** → cleaned sales data for trend, countries, and products charts  
-- **`online_retail_rfm.csv`** → RFM segmentation data for customer segment analysis  
+- **`online_retail_cleaned.csv`** → cleaned sales data for trends, countries, and products  
+- **`online_retail_rfm.csv`** → RFM segmentation data for customer analysis  
 
-Both were exported from the Jupyter notebook (`Ecommerce_Sales_Analysis.ipynb`).
+Both datasets were exported from the Jupyter Notebook file:  
+`Ecommerce_Sales_Analysis.ipynb`.
 
 ---
 
@@ -21,61 +23,62 @@ Both were exported from the Jupyter notebook (`Ecommerce_Sales_Analysis.ipynb`).
 ![Monthly Sales Trend](images/monthly_sales_trend.png)
 
 **Build Summary**
-- `Invoice Date` → Columns (by Month)  
+- `Invoice Date` → Columns (Month)  
 - `SUM(Sales)` → Rows  
-- Add labels (formatted as £, no decimals)
+- Added data labels formatted as **£ (no decimals)**  
 
 **Insights**
-- Sales increase sharply from **September to December**, peaking in **November (£1.17M)**.  
-- Strong **Q4 seasonality** suggests higher demand during holidays and year-end promotions.
+- Sales steadily increase across the year with a major **Q4 spike**.  
+- Peak sales occur in **November (£1.17M)**, reflecting strong **holiday demand**.  
+- Suggests that optimizing stock and marketing ahead of Q4 would maximize revenue.
 
 ---
 
 ### 🌍 2. Top 10 Countries by Sales (£)
-![Top 10 Countries](images/top_countries.png)
+![Top 10 Countries](images/Screenshot_2025-10-14_233918.png)
 
 **Build Summary**
 - `Country` → Rows  
 - `SUM(Sales)` → Columns  
-- Filter to **Top 10** by `SUM(Sales)`  
-- Format axis to **Currency (£)**
+- Applied a **Top 10 filter** by total sales  
+- Formatted axis as **Currency (£)**  
 
 **Insights**
-- The **United Kingdom dominates**, contributing over **£7.4M** in sales.  
-- Secondary markets include **EIRE**, **Netherlands**, **Germany**, and **France**.  
-- These could be strategic regions for marketing expansion.
+- The **United Kingdom** contributes the largest share with **£7.4M** in revenue.  
+- Next strongest markets: **EIRE**, **Netherlands**, **Germany**, and **France**.  
+- This highlights the potential to **expand international marketing** in these countries.
 
 ---
 
 ### 🛍 3. Top 10 Products by Sales (£)
-![Top 10 Products](images/top_products.png)
+![Top 10 Products](images/Screenshot_2025-10-15_001207.png)
 
 **Build Summary**
 - `Description` → Rows  
 - `SUM(Sales)` → Columns  
-- Filter: **Top 10** by sales  
-- Add data labels (formatted £, no decimals)
+- Filtered to **Top 10** by sales value  
+- Labels formatted as **£**, no decimals  
 
 **Insights**
-- **“White Hanging Heart T-Light Holder”** and **“Regency Cake Stand 3 Tier”** are best sellers.  
-- Product sales are highly concentrated — top products drive most of the revenue.  
-- Opportunity to promote mid-tier products or create bundles around top sellers.
+- Top sellers include **“White Hanging Heart T-Light Holder” (£150K)** and **“Regency Cake Stand 3 Tier” (£141K)**.  
+- Product sales are **heavily concentrated**, with only a few items driving most of the revenue.  
+- Opportunity: **cross-sell and bundle** these best-sellers with lower-performing products.
 
 ---
 
 ### 🧩 4. RFM Customer Segments
-![RFM Segments](images/rfm_segments.png)
+![RFM Segments](images/Screenshot_2025-10-15_010624.png)
 
 **Build Summary**
 - Data source: `online_retail_rfm.csv`  
-- Blend with `online_retail_cleaned.csv` on `Customer ID` if needed.  
+- (Optional) Blend with main dataset using **Customer ID**  
 - `Segment` → Rows  
-- `COUNTD(Customer ID)` → Columns
+- `COUNTD(Customer ID)` → Columns  
 
 **Insights**
-- Majority are **Champions** and **Potential Loyalists** — engaged, repeat customers.  
-- Smaller **At Risk** and **Lost** segments indicate some churn potential.  
-- Suggests opportunity for **re-engagement campaigns** and loyalty offers.
+- Majority of customers are **Champions**, **Potential Loyalists**, and **Loyal Customers**.  
+- **At Risk** and **Lost** groups are smaller but worth reactivating with offers.  
+- Indicates strong **customer loyalty** and **repeat purchase behavior** overall.
 
 ---
 
@@ -83,10 +86,10 @@ Both were exported from the Jupyter notebook (`Ecommerce_Sales_Analysis.ipynb`).
 
 | Area | Key Takeaways |
 |------|----------------|
-| **Seasonality** | Strong holiday peak — November highest month. |
-| **Geography** | UK overwhelmingly leads, EIRE and Netherlands next. |
-| **Products** | Revenue concentrated in a few SKUs — room for diversification. |
-| **Customers** | Healthy loyalty base; retention focus needed for “At Risk” group. |
+| **Sales Trend** | Strong Q4 seasonality, peak in November (£1.17M). |
+| **Countries** | UK dominates sales; EIRE and Netherlands show growth potential. |
+| **Products** | Top 2 products generate ~20% of total sales. |
+| **Customers** | Majority are loyal; small churn segment manageable with re-engagement. |
 
 ---
 
@@ -94,10 +97,10 @@ Both were exported from the Jupyter notebook (`Ecommerce_Sales_Analysis.ipynb`).
 
 | Section | Visualization |
 |----------|----------------|
-| **Top Row** | Monthly Sales Trend (full width) |
-| **Middle Row** | Top 10 Countries (left) + Top 10 Products (right) |
-| **Bottom Row** | RFM Customer Segments (full width) |
-| **Footer** | Data source and project link |
+| **Top Row** | Monthly Sales Trend |
+| **Middle Row** | Top 10 Countries and Top 10 Products side-by-side |
+| **Bottom Row** | RFM Customer Segments |
+| **Footer** | Notes, data source, and project link |
 
 ---
 
@@ -105,11 +108,12 @@ Both were exported from the Jupyter notebook (`Ecommerce_Sales_Analysis.ipynb`).
 
 1. Open Tableau → **Connect → Text file → `online_retail_cleaned.csv`**  
 2. Add second data source → `online_retail_rfm.csv`  
-3. (Optional) Blend on `Customer ID`  
-4. Follow build steps above for each visualization  
-5. Combine sheets into one dashboard using the layout plan  
+3. (Optional) Blend both sources using `Customer ID`  
+4. Build each visualization as described above  
+5. Combine into a single dashboard using the layout plan  
 
 ---
+
 
 
 **Created by:** *Jack Lane*  
