@@ -20,7 +20,8 @@ Both datasets were exported from the Jupyter Notebook file:
 ## 📈 Dashboards & Insights
 
 ### 🗓 1. Monthly Sales Trend (£)
-![Monthly Sales Trend](images/monthly_sales_trend.png)
+![Monthly Sales Trend](images/monthly%20sales%20trend.png)
+![Monthly Sales Trend Alt](images/Screenshot%202025-10-15%20002118.png)
 
 **Build Summary**
 - `Invoice Date` → Columns (Month)  
@@ -28,14 +29,14 @@ Both datasets were exported from the Jupyter Notebook file:
 - Added data labels formatted as **£ (no decimals)**  
 
 **Insights**
-- Sales steadily increase across the year with a major **Q4 spike**.  
-- Peak sales occur in **November (£1.17M)**, reflecting strong **holiday demand**.  
-- Suggests that optimizing stock and marketing ahead of Q4 would maximize revenue.
+- Sales steadily increase throughout the year with a major **Q4 spike**.  
+- Peak occurs in **November (£1.17M)**, showing strong **holiday-driven demand**.  
+- Suggests optimizing stock and marketing spend before Q4 to maximize returns.
 
 ---
 
 ### 🌍 2. Top 10 Countries by Sales (£)
-![Top 10 Countries](images/Screenshot_2025-10-14_233918.png)
+![Top 10 Countries](images/Screenshot%202025-10-14%20233918.png)
 
 **Build Summary**
 - `Country` → Rows  
@@ -44,30 +45,30 @@ Both datasets were exported from the Jupyter Notebook file:
 - Formatted axis as **Currency (£)**  
 
 **Insights**
-- The **United Kingdom** contributes the largest share with **£7.4M** in revenue.  
-- Next strongest markets: **EIRE**, **Netherlands**, **Germany**, and **France**.  
-- This highlights the potential to **expand international marketing** in these countries.
+- The **United Kingdom** dominates with **£7.4M** in revenue.  
+- Next best markets: **EIRE**, **Netherlands**, **Germany**, and **France**.  
+- Suggests strong domestic base and international growth opportunities.
 
 ---
 
 ### 🛍 3. Top 10 Products by Sales (£)
-![Top 10 Products](images/Screenshot_2025-10-15_001207.png)
+![Top 10 Products](images/Screenshot%202025-10-15%20001207.png)
 
 **Build Summary**
 - `Description` → Rows  
 - `SUM(Sales)` → Columns  
-- Filtered to **Top 10** by sales value  
+- Filtered to **Top 10** by sales  
 - Labels formatted as **£**, no decimals  
 
 **Insights**
-- Top sellers include **“White Hanging Heart T-Light Holder” (£150K)** and **“Regency Cake Stand 3 Tier” (£141K)**.  
-- Product sales are **heavily concentrated**, with only a few items driving most of the revenue.  
-- Opportunity: **cross-sell and bundle** these best-sellers with lower-performing products.
+- **White Hanging Heart T-Light Holder (£150K)** and **Regency Cake Stand 3 Tier (£141K)** lead sales.  
+- Product sales are **highly concentrated**, driven by a small number of SKUs.  
+- Suggests opportunity for **cross-selling** and **bundling** around best-sellers.
 
 ---
 
 ### 🧩 4. RFM Customer Segments
-![RFM Segments](images/Screenshot_2025-10-15_010624.png)
+![RFM Segments](images/Screenshot%202025-10-15%20010624.png)
 
 **Build Summary**
 - Data source: `online_retail_rfm.csv`  
@@ -76,9 +77,27 @@ Both datasets were exported from the Jupyter Notebook file:
 - `COUNTD(Customer ID)` → Columns  
 
 **Insights**
-- Majority of customers are **Champions**, **Potential Loyalists**, and **Loyal Customers**.  
-- **At Risk** and **Lost** groups are smaller but worth reactivating with offers.  
-- Indicates strong **customer loyalty** and **repeat purchase behavior** overall.
+- Most customers are **Champions**, **Potential Loyalists**, and **Loyal Customers**.  
+- **At Risk** and **Lost** segments indicate early churn — a target for retention campaigns.  
+- Highlights a strong, loyal base and stable repeat-purchase potential.
+
+---
+
+### 📅 5. Seasonal Trend Comparison
+![Seasonal Trend](images/Screenshot%202025-10-15%20001024.png)
+
+**Insights**
+- Sales volume is highest in **late Q4**, coinciding with Christmas-related product categories.  
+- Off-peak months (February–July) show opportunities for targeted offers and remarketing.
+
+---
+
+### 🧾 6. Dashboard Overview
+![Dashboard Overview](images/2a55b592-6664-4d23-9bfe-e2558e000902.png)
+
+**Insights**
+- Final Tableau dashboard layout combining monthly trends, country & product breakdowns, and RFM analysis.  
+- Provides a **comprehensive overview** of performance and customer segmentation at a glance.
 
 ---
 
@@ -86,10 +105,11 @@ Both datasets were exported from the Jupyter Notebook file:
 
 | Area | Key Takeaways |
 |------|----------------|
-| **Sales Trend** | Strong Q4 seasonality, peak in November (£1.17M). |
-| **Countries** | UK dominates sales; EIRE and Netherlands show growth potential. |
-| **Products** | Top 2 products generate ~20% of total sales. |
-| **Customers** | Majority are loyal; small churn segment manageable with re-engagement. |
+| **Sales Trend** | Strong Q4 performance, peak in November (£1.17M). |
+| **Countries** | UK leads; strong secondary markets in EIRE & Netherlands. |
+| **Products** | A few SKUs generate a large proportion of total sales. |
+| **Customers** | High loyalty; opportunity for reactivation of "At Risk" customers. |
+| **Seasonality** | Clear holiday-driven purchasing pattern. |
 
 ---
 
@@ -97,20 +117,20 @@ Both datasets were exported from the Jupyter Notebook file:
 
 | Section | Visualization |
 |----------|----------------|
-| **Top Row** | Monthly Sales Trend |
-| **Middle Row** | Top 10 Countries and Top 10 Products side-by-side |
-| **Bottom Row** | RFM Customer Segments |
-| **Footer** | Notes, data source, and project link |
+| **Top Row** | Monthly Sales Trend (£) |
+| **Middle Row** | Top Countries + Top Products |
+| **Bottom Row** | RFM Customer Segments + Seasonal View |
+| **Footer** | Data sources, project info, key insights summary |
 
 ---
 
 ## ⚙️ How to Recreate in Tableau
 
 1. Open Tableau → **Connect → Text file → `online_retail_cleaned.csv`**  
-2. Add second data source → `online_retail_rfm.csv`  
-3. (Optional) Blend both sources using `Customer ID`  
-4. Build each visualization as described above  
-5. Combine into a single dashboard using the layout plan  
+2. Add another data source → `online_retail_rfm.csv`  
+3. (Optional) Blend on **Customer ID**  
+4. Recreate visuals as above  
+5. Combine into a unified dashboard using the layout plan  
 
 ---
 
