@@ -65,7 +65,8 @@ The data was cleaned in Python to remove null values, duplicates, and invalid en
 ![Trend Line](./images/Screenshot%202025-10-14%20001059.png?raw=1&v=2)
 
 ### 🔮 Monthly Sales Forecast (Next 6 Months)
-![Sales Forecast](./images/Screenshot%202025-10-14%200012319.png?raw=1&v=2)
+![Monthly Revenue Trend](images/MONTHLY%20REVENUE%20TREND.png)
+
 
 ---
 
