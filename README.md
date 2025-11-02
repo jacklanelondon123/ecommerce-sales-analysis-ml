@@ -51,7 +51,7 @@ The data was cleaned in Python to remove null values, duplicates, and invalid en
 ## 📊 3. Exploratory Analysis
 
 ### 🌍 Top 10 Countries by Sales
-![Top Countries](./images/Screenshot%202025-10-14%20001225.png?raw=1&v=2)
+![Top 10 Countries by Revenue](images/TOP%2010%20COUNTRIES%20BY%20REVENUE.png)
 
 
 ---
