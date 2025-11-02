@@ -61,10 +61,10 @@ The data was cleaned in Python to remove null values, duplicates, and invalid en
 ### 📅 Monthly Sales Over Time
 ![Monthly Sales Over Time](./images/Screenshot%202025-10-14%20001035.png?raw=1&v=2)
 
-🔮 Monthly Sales Forecast (Next 6 Months)
+### 🔮 Monthly Sales Forecast (Next 6 Months)
 ![Trend Line](./images/Screenshot%202025-10-14%20001059.png?raw=1&v=2)
 
-📈 Monthly Sales
+### 📈 Monthly Sales
 ![Monthly Revenue Trend](images/MONTHLY%20REVENUE%20TREND.png)
 
 
