@@ -54,7 +54,7 @@ The data was cleaned in Python to remove null values, duplicates, and invalid en
 ![Top Countries](./images/Screenshot%202025-10-14%20001225.png?raw=1&v=2)
 
 ### 🏆 Top 10 Products by Sales
-![Top Products](./images/Screenshot%202025-10-14%200012226.png?raw=1&v=2)
+![Top Products](./images/TOP 10 PRODUCTS BY REVENUE)
 
 ---
 
